@@ -48,30 +48,14 @@ export default function formattingMenuItems(state: EditorState): MenuItem[] {
       active: isMarkActive(schema.marks.mark),
     },
     {
-      name: "code_inline",
-      tooltip: "Code",
-      icon: CodeIcon,
-      active: isMarkActive(schema.marks.code_inline),
-    },
-    {
       name: "separator",
       visible: allowBlocks,
     },
     {
-      name: "heading",
-      tooltip: "Heading",
-      icon: Heading1Icon,
-      active: isNodeActive(schema.nodes.heading, { level: 1 }),
-      attrs: { level: 1 },
-      visible: allowBlocks,
-    },
-    {
-      name: "heading",
-      tooltip: "Subheading",
-      icon: Heading2Icon,
-      active: isNodeActive(schema.nodes.heading, { level: 2 }),
-      attrs: { level: 2 },
-      visible: allowBlocks,
+      name: "code_inline",
+      tooltip: "Code",
+      icon: CodeIcon,
+      active: isMarkActive(schema.marks.code_inline),
     },
     {
       name: "blockquote",
@@ -80,9 +64,6 @@ export default function formattingMenuItems(state: EditorState): MenuItem[] {
       active: isNodeActive(schema.nodes.blockquote),
       attrs: { level: 2 },
       visible: allowBlocks,
-    },
-    {
-      name: "separator",
     },
     {
       name: "link",
